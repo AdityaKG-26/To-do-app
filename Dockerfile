@@ -2,11 +2,11 @@ FROM python:3
 
 WORKDIR /data
 
+COPY . .
+
 RUN pip install --upgrade pip
 
 RUN pip install django==3.2
-
-COPY . .
 
 RUN python manage.py migrate
 
