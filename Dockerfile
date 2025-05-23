@@ -2,7 +2,7 @@ FROM python:3
 
 WORKDIR /data
 
-RUN pip install --upgrade django
+RUN pip install --upgrade pip
 
 RUN pip install django==3.2
 
