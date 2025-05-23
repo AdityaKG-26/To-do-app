@@ -2,14 +2,13 @@ FROM python:3.9
 
 WORKDIR /data
 
-#COPY . .
-COPY requirements.txt .
+#RUN pip install --no-cache-dir -r requirements.txt
 
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
 
-#RUN pip install --upgrade pip
+RUN pip install django==3.2
 
-#RUN pip install django==3.2
+COPY . .
 
 RUN python manage.py migrate
 
